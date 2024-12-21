@@ -1,0 +1,31 @@
+---
+
+---
+
+<nav class="flex items-center justify-between p-8 w-full sm:w-9/12 h-20">
+  <ul class="flex gap-4 text-gray-500">
+    <li class="hover:text-black"><a href="/">home</a></li>
+    <li class="hover:text-black"><a href="/about">about</a></li>
+    <li class="hover:text-black"><a href="/about">project</a></li>
+    <li class="hover:text-black"><a href="/contact" class="">contact</a></li>
+  </ul>
+  <div>
+    <input class="hidden" type="checkbox" id="menuToggle" />
+    <label for="menuToggle">
+        <img class="w-8 h-8" id="pawIcon" src="/src/assets/paw-on.png" alt="paw-icon">
+    </label>
+  </div>
+</nav>
+
+<script type="module">
+    const checkbox = document.querySelector('#menuToggle');
+    const pawIcon = document.querySelector('#pawIcon');
+
+    checkbox.addEventListener('change', () => {
+        if (!checkbox.checked) {
+            pawIcon.src = '/src/assets/paw-off.png';
+        } else {
+            pawIcon.src = '/src/assets/paw-on.png';
+        }
+    });
+</script>
