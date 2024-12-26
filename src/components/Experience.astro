@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+
+const experience = await getCollection('experience', ({ data }: { data: any }) => {
+	return !data.inProgress;
+});
+
+console.log(experience);
+---
+
+<section class="p-8">
+    <h2 class="text-brandOrange text-2xl sm:text-4xl font-bold">Experience</h2>
+    <ul>
+        {experience.map((exp: any) => (
+            <li class="my-4">
+                <p class="text-brandGray">{exp.data.date}</p>
+                <h4 class="text-brandOrange text-xl sm:text-3xl font-semibold">{exp.data.company}</h4>
+                <p>{exp.data.jobTitle}</p>
+                <ul class="ml-8 mt-4 list-disc">
+                    {exp.data.description?.map((desc: string) => (
+                        <li class="my-1">{desc}</li>
+                    ))}
+                </ul>
+            </li>
+        ))}
+    </ul>
+</section>
