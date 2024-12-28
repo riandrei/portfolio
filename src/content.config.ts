@@ -8,6 +8,9 @@ import { glob, file } from "astro/loaders";
 const experience = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/content/experience" }),
 });
+const skills = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "src/content/skills" }),
+});
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { experience };
+export const collections = { experience, skills };
