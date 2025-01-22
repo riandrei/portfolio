@@ -4,8 +4,6 @@ import { getCollection } from "astro:content";
 const experience = await getCollection('experience', ({ data }: { data: any }) => {
 	return !data.inProgress;
 });
-
-console.log(experience);
 ---
 
 <section class="p-8">

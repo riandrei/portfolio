@@ -11,6 +11,9 @@ const experience = defineCollection({
 const skills = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/content/skills" }),
 });
+const projects = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "src/content/projects" }),
+});
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { experience, skills };
+export const collections = { experience, skills, projects };

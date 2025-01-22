@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+
+const projects = await getCollection('projects', ({ data }: { data: any }) => {
+	return !data.inProgress;
+});
+
+console.log(projects);
+---
+
+<section class="p-8">
+    <h2 class="text-brandOrange text-2xl sm:text-4xl font-bold">Projects</h2>
+    <div class="flex gap-8 lg:gap-16 flex-wrap items-center justify-center my-4">
+        {projects.map((project: any) => (
+            <div class="flex flex-col gap-2 lg:flex-row items-center lg:justify-between lg:gap-8 xl:max-w-5xl items-stretch">
+                <img class="w-10/12 lg:w-[45%] object-contain   " src={project.data.image} alt={project.data.title}>
+                <div class="flex flex-col gap-2 w-10/12 lg:w-[55%]">
+                    <h2 class="text-2xl sm:text-3xl xl:text-4xl font-bold">{project.data.name}</h2>
+                    <p class="sm:text-lg xl:text-xl">{project.data.description}</p>
+                    <div class="flex gap-2 mb-1">
+                        {project.data.tags?.map((tag: string) => (
+                            <small class="bg-brandOrange rounded-md p-2 text-white font-semibold text-regular">{tag}</small>
+                        ))}
+                    </div>
+                    <div class="flex gap-2">
+                        <a href={project.data.githubLink} target="_blank">
+                            <button class="bg-brandGray flex items-center justify-center gap-2 font-semibold text-white py-2 px-4 rounded-lg sm:text-lg xl:text-xl">
+                                <img class="w-6 sm:w-8" src="/src/assets/Github.png" alt="GitHub">
+                                Code
+                            </button>
+                        </a>
+                        <a href={project.data.demoLink} target="_blank">
+                            <button class="bg-brandGray flex items-center justify-center gap-2 font-semibold text-white py-2 px-4 rounded-lg sm:text-lg xl:text-xl">
+                                <img class="w-6 sm:w-8" src="/src/assets/Globe.png" alt="Globe">
+                                Demo
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>
