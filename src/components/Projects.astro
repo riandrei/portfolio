@@ -6,7 +6,7 @@ const projects = await getCollection('projects', ({ data }: { data: any }) => {
 });
 ---
 
-<section class="p-8">
+<section id="projects" class="p-8">
     <h2 class="text-brandOrange text-2xl sm:text-4xl font-bold">Projects</h2>
     <div class="flex gap-8 lg:gap-16 flex-wrap items-center justify-center my-4">
         {projects.map((project: any) => (
