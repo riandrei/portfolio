@@ -7,5 +7,5 @@
         {name: AstroJS, image: src/assets/AstroJS.png},
         {name: TailwindCSS, image: src/assets/Tailwindcss.png},
     ]
-
+    order: 1
 ---

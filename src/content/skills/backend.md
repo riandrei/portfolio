@@ -7,4 +7,5 @@
         {name: MongoDB, image: src/assets/MongoDB.png},
         {name: Firebase, image: src/assets/Firebase.png},
     ]
+    order: 2
 ---

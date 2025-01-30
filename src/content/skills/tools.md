@@ -7,4 +7,5 @@
         {name: Vite, image: src/assets/Vite.png},
         {name: Postman, image: src/assets/Postman Api.png},
     ]
+    order: 3
 ---
