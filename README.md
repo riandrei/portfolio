@@ -2,7 +2,7 @@ _A showcase of my projects, skills, and journey as a developer._
 
 # Riandrei Casañas Portfolio 👨💻
 
-![Portfolio Screenshot](./src/assets/screenshot-full.png) _<!-- Add a screenshot of your site -->_  
+![Portfolio Screenshot](./public/screenshot-full.png)
 **Live Demo:** [portfolio.riandrei.tech](https://portfolio.riandrei.tech)
 
 ---
