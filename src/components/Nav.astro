@@ -13,7 +13,7 @@
   <div>
     <input class="hidden" type="checkbox" id="menuToggle" />
     <label for="menuToggle" id="menuToggleLabel">
-        <img class="w-8 h-8" id="pawIcon" src="/src/assets/paw-on.png" alt="paw-icon">
+        <img class="w-8 h-8" id="pawIcon" src="./src/assets/paw-on.png" alt="paw-icon">
     </label>
   </div>
 </nav>
@@ -288,7 +288,7 @@
     const pawIcon = document.querySelector('#pawIcon');
     const oneko = document.getElementById('oneko');
 
-    pawIcon.src = nekoSleeping ? '/src/assets/paw-on.png' : '/src/assets/paw-off.png';
+    pawIcon.src = nekoSleeping ? './src/assets/paw-on.png' : './src/assets/paw-off.png';
     
     if (oneko) {
       nekoSleeping = !nekoSleeping;
